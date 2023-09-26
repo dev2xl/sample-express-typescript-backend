@@ -12,7 +12,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 // Setup routes
-app.use("/auth", authRouter);
-app.use("/tracking-parcel", trackingRouter);
+app.use("/api/auth", authRouter);
+app.use("/api/tracking-parcel", trackingRouter);
 
 export default app;

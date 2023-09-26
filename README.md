@@ -12,8 +12,8 @@ This is a sample Express server, with a layered architecture, that consumes an e
 
 ## Endpoints
 
-- POST /auth/generate-token
-- GET /tracking-parcel/:token
+- POST /api/auth/generate-token
+- GET /api/tracking-parcel/:token
 
 Default port: 5001
 
