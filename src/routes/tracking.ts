@@ -1,13 +1,13 @@
-import express from "express";
-import { handleTrackingToken } from "@/controllers/TrackingController";
+import express from 'express'
+import { handleTrackingToken } from '@/controllers/TrackingController'
 
-const router = express.Router();
+const router = express.Router()
 
 /**
  * GET /tracking-parcel/:token
  * @param req
  * @param res
  */
-router.get("/:trackingId", handleTrackingToken);
+router.get('/:trackingId', handleTrackingToken)
 
-export default router;
+export default router

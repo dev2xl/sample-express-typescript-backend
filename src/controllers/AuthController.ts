@@ -21,9 +21,7 @@ export const handleGenerate = (req: Request, res: Response) => {
     const token = createAuthToken(login, password);
 
     res.json({ success: true, token });
+  } catch (e) {
+    res.status(400).json({ success: false, error: (e as Error).message });
   }
-  catch (e){
-      res.status(400).json({ success: false, error: (e as Error).message });
-  }
-
 };
