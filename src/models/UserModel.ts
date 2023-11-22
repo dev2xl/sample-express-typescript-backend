@@ -1,5 +1,5 @@
-import { model, models, Schema } from 'mongoose'
-import { User } from '@/interfaces/user'
+import { model, models, Schema } from 'mongoose';
+import { User } from '@/interfaces/user';
 
 // Create Schema
 const userSchema = new Schema<User>({
@@ -9,18 +9,18 @@ const userSchema = new Schema<User>({
     unique: true,
     match: /[^&#$()\[\]\\{}/]+@[^&#$()\[\]\\{}/]+\.[^&#$()\[\]\\{}/]+/,
     lowercase: true,
-    trim: true
+    trim: true,
   },
   password: {
     type: String,
-    required: true
+    required: true,
   },
   name: String,
   createdAt: {
     type: Date,
-    default: Date.now
+    default: Date.now,
   },
-  updatedAt: Date
-})
+  updatedAt: Date,
+});
 
-export default models?.User || model<User>('User', userSchema)
+export default models?.User || model<User>('User', userSchema);
