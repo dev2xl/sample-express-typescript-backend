@@ -17,7 +17,13 @@ export const handleGenerate = (req: Request, res: Response) => {
     });
   }
 
-  const token = createAuthToken(login, password);
+  try {
+    const token = createAuthToken(login, password);
 
-  res.json({ success: true, token });
+    res.json({ success: true, token });
+  }
+  catch (e){
+      res.status(400).json({ success: false, error: (e as Error).message });
+  }
+
 };
