@@ -6,9 +6,12 @@ This is a sample Express server, with a layered architecture, that consumes an e
 
 - NodeJS
 - Express
+- Mongoose
+- Bcrypt
 - Axios
 - Jsonwebtoken
 - Typescript
+
 
 ## Endpoints
 
